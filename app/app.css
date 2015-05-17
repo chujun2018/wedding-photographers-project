@@ -28,3 +28,9 @@
   content: "";
   padding: 0;
 }
+
+.home-background {
+    background-image: url("images/isle_of_wight/6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

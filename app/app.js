@@ -5,6 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.homeView',
   'myApp.photographerView',
+  'myApp.signupView',
+  'myApp.userView',
   'ui.bootstrap.datetimepicker'
 ]).
 config(['$routeProvider', function($routeProvider) {

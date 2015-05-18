@@ -6,9 +6,13 @@ angular.module('myApp', [
   'myApp.homeView',
   'myApp.photographerView',
   'myApp.signupView',
+  'myApp.searchView',
   'myApp.userView',
   'ui.bootstrap.datetimepicker'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/homeView'});
-}]);
+}]).controller('mainCtrl', ['$rootScope', '$scope',function($rootScope, $scope) {
+   $rootScope.closeModel = function(){
+   $('#loginModel').modal('hide');
+}}]);

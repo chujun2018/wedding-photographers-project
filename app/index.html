@@ -31,9 +31,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-
-
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-init="userHere=false">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -41,14 +39,15 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+
+            <ul class="nav navbar-nav navbar-right" ng-hide="userHere">
                 <li><a href="#/signupView">Sign Up</a></li>
                 <li><a class="btn" data-toggle="modal" data-target="#loginModel">Sign In</a></li>
                 <li><a href="#/photographerView">Photographer Portal</a></li>
-
             </ul>
-        </div>
+        <ul class="nav navbar-nav navbar-right" ng-show="userHere">
+            <li><a href="#/userView">My Account</a></li>
+        </ul>
     </div>
 </nav>
 <div ng-view></div>
@@ -62,6 +61,7 @@
     </div>
     </div>
 </nav>
+
 
 <!-- Legal -->
 <div class="modal fade" id="legalModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -148,7 +148,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <a href="#/userView" class="btn btn-primary">Sign In</a>
+                <button class="btn btn-primary" ng-click="userHere=true" data-dismiss="modal">Sign In</button>
             </div>
         </div>
     </div>
@@ -168,5 +168,6 @@
 <script src="photographerView/photographerView.js"></script>
 <script src="signupView/signupView.js"></script>
 <script src="userView/userView.js"></script>
+<script src="searchView/searchView.js"></script>
 </body>
 </html>

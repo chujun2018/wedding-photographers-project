@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="padding-left:40px">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Search" ng-model="searchText"/>
+                <i class="glyphicon glyphicon-search form-control-feedback"></i>
+            </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Filter by
+                </a>
+                <a href="" class="list-group-item">Price Range</a>
+                <a href="" class="list-group-item">Review Score</a>
+                <a href="" class="list-group-item">Star Rating</a>
+                <a href="" class="list-group-item">Region</a>
+                <a href="" class="list-group-item">Style</a>
+                <a href="" class="list-group-item">Language</a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-2">Sort by:</div>
+                <div class="col-md-6">
+
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Price</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default">Rating</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="jumbotron row" ng-repeat="photographer in photographers | filter:searchText">
+                <div class="col-md-4">
+                    <img src="{{photographer.photo}}" height="100" width="100" style="border-radius:75px">
+                </div>
+                <div class="col-md-4">
+                    <p>Name: {{photographer.name}}</p>
+                    <p>Location: {{photographer.Location}}</p>
+                    <p>Rating: {{photographer.rating}}</p>
+                </div>
+                <div class="col-md-1">
+                    <p class="glyphicon glyphicon-star"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

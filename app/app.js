@@ -13,6 +13,8 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/homeView'});
 }]).controller('mainCtrl', ['$rootScope', '$scope',function($rootScope, $scope) {
+$rootScope.accountName='';
    $rootScope.closeModel = function(){
    $('#loginModel').modal('hide');
+
 }}]);

@@ -9,7 +9,11 @@ angular.module('myApp.photographerView', ['ngRoute'])
   });
 }])
 
-.controller('photographerViewCtrl', [function() {
-
+.controller('photographerViewCtrl', ['$rootScope',function($rootScope) {
+  $rootScope.photographers = [
+                               {'firstName':'John Doe', 'description':'','photos':''},
+                               {'firstName':'Anna Smith', 'description':'Smith', 'photos':''},
+                               {'firstName':'Peter Jones', 'description':'Jones', 'photos':''}
+                             ];
 
 }]);

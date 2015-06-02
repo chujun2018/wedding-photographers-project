@@ -3,35 +3,51 @@
     <form class="form-inline" style="margin: 0 auto;width:800px;padding-top:400px">
         <div style="line-height: 50px;">
             <div class="form-group">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                            aria-expanded="false">
-                        Destination Search Box
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">UK</label>
-                            </div>
-                        </a></li>
-                        <li><a href="">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">France</label>
-                            </div>
-                        </a></li>
-                        <li><a href="">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Italy</label>
-                            </div>
-                        </a></li>
-                        <li><a href="">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Spain</label>
-                            </div>
-                        </a></li>
-                    </ul>
-                </div>
+                <!--<div class="btn-group" role="group">-->
+                    <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"-->
+                            <!--aria-expanded="false">-->
+                        <!--Destination Search Box-->
+                        <!--<span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li><a href="">-->
+                            <!--<div class="checkbox">-->
+                                <!--<label><input type="checkbox" value="">UK</label>-->
+                            <!--</div>-->
+                        <!--</a></li>-->
+                        <!--<li><a href="">-->
+                            <!--<div class="checkbox">-->
+                                <!--<label><input type="checkbox" value="">France</label>-->
+                            <!--</div>-->
+                        <!--</a></li>-->
+                        <!--<li><a href="">-->
+                            <!--<div class="checkbox">-->
+                                <!--<label><input type="checkbox" value="">Italy</label>-->
+                            <!--</div>-->
+                        <!--</a></li>-->
+                        <!--<li><a href="">-->
+                            <!--<div class="checkbox">-->
+                                <!--<label><input type="checkbox" value="">Spain</label>-->
+                            <!--</div>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+                <div class="btn-group" >
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    {{searchLocation}}
+                     <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ng-click="searchLocation='Europe'">Europe</a></li>
+                    <li><a ng-click="searchLocation='Asia'">Asia</a></li>
+                    <li><a ng-click="searchLocation='Middle East'">Middle East</a></li>
+                    <li><a ng-click="searchLocation='America'">America</a></li>
+                    <li class="divider"></li>
+                    <li><a ng-click="searchLocation='Others'">Others</a></li>
+                </ul>
+            </div>
+
             </div>
             <div class="dropdown form-group">
                 <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown">

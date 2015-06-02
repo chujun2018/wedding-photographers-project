@@ -9,7 +9,7 @@ angular.module('myApp.homeView', ['ngRoute'])
   });
 }])
 
-.controller('homeViewCtrl', [function() {
-
+.controller('homeViewCtrl', ['$rootScope',function($rootScope) {
+    $rootScope.searchLocation = 'Select Location';
 
 }]);

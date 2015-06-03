@@ -17,6 +17,18 @@
                 <a href="" class="list-group-item">Support Service Packages</a>
             </div>
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <div class="row" ng-repeat="photographer in bookings track by $index | filter:searchText">
+                <div class="col-md-4    ">
+                    <img src="{{photographer.photo}}" height="100" width="100" style="border-radius:75px">
+                </div>
+                <div class="col-md-4">
+                    <p>Name: {{photographer.firstName}}</p>
+                    <p>Location: {{photographer.location}}</p>
+                    <button class="btn btn-primary" ng-click="selectedPhotographers()">Detail</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

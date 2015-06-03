@@ -9,7 +9,9 @@ angular.module('myApp.userView', ['ngRoute'])
   });
 }])
 
-.controller('userViewCtrl', [function() {
-
+.controller('userViewCtrl', ['$scope','$location',function($scope,$location) {
+  $scope.selectedPhotographers = function(){
+          $location.path('photographerView');
+     }
 
 }]);

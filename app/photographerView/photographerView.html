@@ -1,14 +1,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 col-md-offset-2">
-            <h2>Daniel</h2>
-            <img src="http://lh5.ggpht.com/_asusYZpyZdU/SwrkzoxACJI/AAAAAAAAALs/a2tdA86JZfY/2009-mens-hot-short-hairstyle.jpg" class="img-circle" alt="Cinque Terre" width="304" height="304">
+            <h2 style="padding-left:40px">{{selectedBooking.firstName}}</h2>
+            <img src="{{selectedBooking.photo}}" class="img-circle" alt="Cinque Terre" width="304" height="304">
             <br>
-            <h5>UK Photpgraher, wedding photography experts.</h5>
+            <h5>Photpgraher, wedding photography experts.</h5>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-4 ">
-            <button class="btn btn-primary" style="width:100%">Book</button>
+            <button class="btn btn-primary" style="width:100%" ng-click="takeBooking()">Book</button>
             <br>
             <br>
             <button class="btn btn-primary" style="width:100%">Save for Later</button>
@@ -25,37 +25,37 @@
     <h3>Show Case work</h3>
     <div class="row">
         <div class="col-md-4"><img
-                src="images/isle_of_wight/1.jpg"
+                src="images/{{selectedBooking.art}}/1.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
         <div class="col-md-4"><img
-                src="images/isle_of_wight/2.jpg"
+                src="images/{{selectedBooking.art}}/2.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
         <div class="col-md-4"><img
-                src="images/isle_of_wight/3.jpg"
-                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-4"><img
-                src="images/isle_of_wight/4.jpg"
-                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-        <div class="col-md-4"><img
-                src="images/isle_of_wight/5.jpg"
-                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
-        <div class="col-md-4"><img
-                src="images/isle_of_wight/6.jpg"
+                src="images/{{selectedBooking.art}}/3.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
     </div>
     <hr>
     <div class="row">
         <div class="col-md-4"><img
-                src="images/isle_of_wight/7.jpg"
+                src="images/{{selectedBooking.art}}/4.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
         <div class="col-md-4"><img
-                src="images/isle_of_wight/10.jpg"
+                src="images/{{selectedBooking.art}}/5.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
         <div class="col-md-4"><img
-                src="images/isle_of_wight/9.jpg"
+                src="images/{{selectedBooking.art}}/6.jpg"
+                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4"><img
+                src="images/{{selectedBooking.art}}/7.jpg"
+                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+        <div class="col-md-4"><img
+                src="images/{{selectedBooking.art}}/10.jpg"
+                class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+        <div class="col-md-4"><img
+                src="images/{{selectedBooking.art}}/9.jpg"
                 class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
     </div>
 </div>

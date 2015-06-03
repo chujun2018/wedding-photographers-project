@@ -14,6 +14,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/homeView'});
 }]).controller('mainCtrl', ['$rootScope', '$scope',function($rootScope, $scope) {
 $rootScope.accountName='';
+$rootScope.bookings = [{'firstName':'Anna Smith', 'location':'UK','description':'Smith', 'photo':'http://www.theappvillage.com/wp-content/uploads/2013/04/David_McGowan_portrait_square.png', 'art':'isle_of_wight'}];
    $rootScope.closeModel = function(){
    $('#loginModel').modal('hide');
 

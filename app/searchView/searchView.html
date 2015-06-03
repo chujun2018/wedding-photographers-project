@@ -34,14 +34,14 @@
 
             </div>
             <br>
-            <div class="row" ng-repeat="photographer in photographers tracke | filter:searchText">
+            <div class="row" ng-repeat="photographer in photographers track by $index | filter:searchText">
                 <div class="col-md-4    ">
                     <img src="{{photographer.photo}}" height="100" width="100" style="border-radius:75px">
                 </div>
                 <div class="col-md-4">
-                    <hr>
                     <p>Name: {{photographer.firstName}}</p>
                     <p>Location: {{photographer.location}}</p>
+                    <button class="btn btn-primary" ng-click="selectedPhotographers($index)">Detail</button>
                     <hr>
                 </div>
             </div>
